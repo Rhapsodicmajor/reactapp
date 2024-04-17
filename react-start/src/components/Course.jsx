@@ -8,6 +8,7 @@ const Course = ({ course }) => {
       <Card.Body>
         <Card.Title>{course.title}</Card.Title>
         <Card.Text>{course.description}</Card.Text>
+        <Card.Text>Time: {course.hours}</Card.Text>
         <Button variant="primary">Study</Button>
       </Card.Body>
     </Card>
