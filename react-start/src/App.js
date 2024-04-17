@@ -1,5 +1,6 @@
 import Header from './components/Header'
 import Footer from './components/Footer';
+import CourseList from './components/CourseList';
 import Main from './components/Main';
 
 function App() {
@@ -7,6 +8,7 @@ function App() {
     <>
       <Header/>
       <Main/>
+      <CourseList/>
       <Footer className="mt-auto" />
     </>
   );
