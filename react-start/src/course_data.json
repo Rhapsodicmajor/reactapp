@@ -4,20 +4,23 @@
         "title": "Теория принятия решений",
         "description": "Методы оптимизаций и решения задачи принятия решения",
         "hours": 155,
-        "img": "https://4brain.ru/decision/images/2.jpg"
+        "img": "https://4brain.ru/decision/images/2.jpg",
+        "liked": false
     },
     {
         "id": 2,
         "title": "Разработка веб-приложений",
         "description": "Создание собственных веб-приложений с использованием React",
         "hours": 67,
-        "img": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSUniNNywT5odIyTjqLtFu9H7Dv0_YLvDjE98R__L1BDQ&s"
+        "img": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSUniNNywT5odIyTjqLtFu9H7Dv0_YLvDjE98R__L1BDQ&s",
+        "liked": false
     },
     {
         "id": 3,
         "title": "Технологии баз данных",
         "description": "Изучение запросов PostgreSQL и теория баз данных",
         "hours": 89,
-        "img": "https://oracle-patches.com/images/2019/10/28/Databases_large.jpg"
+        "img": "https://oracle-patches.com/images/2019/10/28/Databases_large.jpg",
+        "liked": false
     }
 ]
