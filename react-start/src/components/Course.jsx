@@ -25,7 +25,7 @@ const Course = ({ course }) => {
         style={{ position: 'absolute', top: '10px', right: '10px', zIndex: 1 }}
         onClick={handleLike}
       >
-        {liked ? <AiFillHeart /> : <AiOutlineHeart />} {/* Используйте иконки, если хотите */}
+        {liked ? <AiFillHeart /> : <AiOutlineHeart />} {/* сюды можно иконки */}
       </Button>
       <Card.Img variant="top" src={course.img} style={{ height: '200px', objectFit: 'cover' }}/>
       <Card.Body>
