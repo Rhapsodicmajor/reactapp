@@ -1,13 +1,15 @@
-import { useEffect, useState } from "react";
+import React, { useState, useEffect } from "react";
 import "../style.scss";
 import "bootstrap/dist/css/bootstrap.min.css";
-import { Card, Button } from "react-bootstrap";
+import { Card, Button, Container, Row } from "react-bootstrap";
+import UserFilter from "./UserFilter";
 
 const ProductListApi = () => {
   const [products, setProducts] = useState([]);
   const [users, setUsers] = useState([]);
   const [page, setPage] = useState(1);
   const limit = 8;
+  const [selectedUserId, setSelectedUserId] = useState(null);
 
   useEffect(() => {
     fetch("https://jsonplaceholder.typicode.com/todos")
@@ -35,7 +37,16 @@ const ProductListApi = () => {
     return user ? user.name : "";
   };
 
-  const productCards = products
+  const handleUserSelect = (userId) => {
+    setSelectedUserId(userId);
+    setPage(1); // Reset the page when a new user is selected
+  };
+
+  const filteredProducts = selectedUserId
+    ? products.filter((product) => product.userId === selectedUserId)
+    : products;
+
+  const productCards = filteredProducts
     .slice(0, page * limit)
     .map((product) => (
       <Card
@@ -61,10 +72,11 @@ const ProductListApi = () => {
 
   return (
     <>
-      <div className="container">
-        <div className="row">{productCards}</div>
+      <Container>
+        <UserFilter users={users} onUserSelect={handleUserSelect} showAllTodos={true} /> {/* Add the UserFilter component and pass the showAllTodos prop */}
+        <Row>{productCards}</Row>
         <Button onClick={handleLoadMore}>Ещё</Button>
-      </div>
+      </Container>
     </>
   );
 };
