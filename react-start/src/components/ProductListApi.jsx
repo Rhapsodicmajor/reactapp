@@ -39,7 +39,7 @@ const ProductListApi = () => {
 
   const handleUserSelect = (userId) => {
     setSelectedUserId(userId);
-    setPage(1); // Reset the page when a new user is selected
+    setPage(1);
   };
 
   const filteredProducts = selectedUserId
